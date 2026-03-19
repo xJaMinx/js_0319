@@ -1,0 +1,89 @@
+        #header{
+            position: relative;
+            height: 200px;
+        }
+
+        #header #a1{
+            margin-left: 20px;
+        }
+
+        #header #a1 li{
+            width: 120px;
+            border: 1px solid #eee;
+        }
+
+        #header #a1 li a{
+            display: block;
+            padding: 3px 8px;
+            color: #fff;
+            background: steelblue;
+            font-weight: bold;
+        }
+
+        #header #a1 li a:hover{
+            background: #ccc;
+            color: #000;
+        }
+
+        #header #title{
+            position: absolute;
+            left: 200px; top: 0;
+        }
+
+        #header #nav1{
+            position: absolute;
+            right: 0; top: 0;
+        }
+
+        #header #nav1 ul{
+            overflow: hidden;
+        }
+
+        #header #nav1 ul li{
+            float: left;
+            border-right: 1px solid #bbb;
+            border-bottom: 1px solid #bbb;
+            border-top: 1px solid #bbb;
+        }
+
+        #header #nav1 ul li:first-child{
+            border-left: 1px solid #bbb;
+        }
+        
+        #header #nav1 ul li a{
+            display: block;
+            color: #999;
+            padding: 1px 8px;
+        }
+
+        #header #nav1 ul li a:hover{
+            color: #000;
+            background: #bbb;
+        }
+
+        #header #nav2{
+            position: absolute;
+            right: 0; bottom: 0;
+        }
+
+        #header #nav2 ul li{
+            float: left;
+            border-top: 1px solid #bbb;
+            border-right: 1px solid #bbb;
+            border-bottom: 1px solid #bbb;
+        }
+
+        #header #nav2 ul li:first-child{
+            border-left: 1px solid #bbb;
+        }
+
+        #header #nav2 ul li a{
+            display: block;
+            color: #999;
+            padding: 10px 20px;
+        }
+
+        #header #nav2 ul li a:hover{
+            color: #000;
+            background: #bbb;
+        }

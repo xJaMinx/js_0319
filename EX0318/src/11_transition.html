@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .ex{
+            width: 100px;
+            height: 100px;
+            background : red;
+            border-radius: 0px;
+
+            transition-property: background, border-radius;
+            transition-duration: 2s; /* 2초 동안 변경 */
+            transition-delay: 2s; /* 2초후 변경 */
+            
+
+            -webkit-transition-property: background, border-radius;
+            -webkit-transition-duration: 2s; /* 2초 동안 변경 */
+            -webkit-transition-delay : 2s;
+
+            -moz-transition-property: background, border-radius;
+            -moz-transition-duration: 2s; /* 2초 동안 변경 */
+            -moz-transition-delay: 2s;
+        }
+
+        /*
+        -webkit- : 크롬, 사파리
+        -moz- : 파이어폭스
+        -o- : 오페라
+        -ms- : 익스플로러
+        */
+
+        .ex:hover{
+            background: blue;
+            border-radius: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <p>도형 위로 마우스를 오려보세요</p>
+    <div class="ex"></div>
+
+
+</body>
+</html>

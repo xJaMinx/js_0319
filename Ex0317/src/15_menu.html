@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{margin: 0; padding: 0;}
+        li{list-style: none;}
+
+        #menu{
+            background: #333;
+            overflow: hidden;
+        }
+
+        #menu > li{
+            float: left;
+        }
+
+        #menu li a{
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+        }
+
+        #menu > li > a:hover{
+            background: #555;
+        } 
+
+        ul.submenu li a:hover{
+            background: #aaf;
+        }
+
+        ul.submenu{
+            position: absolute;
+            background: #333;
+            display: none;
+        }
+
+        #menu li:hover ul.submenu{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <ul id="menu">
+        <li>
+            <a href="#">주 메뉴1</a>
+            <ul class="submenu">
+                <li><a href="#">하위메뉴1-1</a></li>
+                <li><a href="#">하위메뉴1-2</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">주 메뉴2</a>
+            <ul class="submenu">
+                <li><a href="#">하위메뉴2-1</a></li>
+                <li><a href="#">하위메뉴2-2</a></li>
+                <li><a href="#">하위메뉴2-3</a></li>
+            </ul>
+        </li>
+        
+        <li>
+            <a href="#">주 메뉴3</a>
+            <ul class="submenu">
+                <li><a href="#">하위메뉴3-1</a></li>
+                <li><a href="#">하위메뉴3-2</a></li>
+                <li><a href="#">하위메뉴3-3</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>
