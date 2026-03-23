@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function check1(){
+            //body에서 form태그를 조회
+            let f = document.forms[1];
+
+            let id = f.myid.value;
+            let pw = f.mypwd.value;
+
+            alert(id + " / " + pw);
+
+            if(id ===""){
+                alert("아이디를 입력하세요");
+                return;
+            }
+            if(pw === ""){
+            alert("비밀번호를 입력하세요")
+                return
+            }
+
+            f.action = "a.html";
+            f.action = "get";
+
+            f.submit();
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <form></form>
+
+    <form action="a.html" method="get">
+        <table border="1">
+            <tr>
+                <th>아이디</th>
+                <td><input name="myid"/></td>
+            </tr>
+
+            <tr>
+                <th>비밀번호</th>
+                <td><input type="password" name="mypwd"/></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="전송" onclick="check1()"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

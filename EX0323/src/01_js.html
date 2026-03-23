@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        //브라우저 로드가 완료되면 자동으로 호출되는 영역
+        window.onload = function(){
+            let newDiv = document.createElement("div");
+            let main_div = document.getElementById("main_div");
+
+            //새로만든 div에 텍스트 추가
+            newDiv.innerHTML = "새로만든 div";
+
+            //newDiv에 스타일 추가
+            newDiv.style.background = "lightblue";
+            newDiv.style.padding = "20px";
+            newDiv.style.margin = "10px";
+            newDiv.style.borderRadius = "5px";
+
+            //main_div에 새로 만든 newDiv를 담자
+            main_div.appendChild(newDiv);
+
+            let inputTest = document.createElement("input");
+
+            inputTest.value = "입력상자";
+
+            main_div.appendChild(inputTest);
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <div id="main_div">
+        메인 DIV
+    </div>
+
+</body>
+</html>

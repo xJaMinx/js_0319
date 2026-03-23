@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function checkInput(){
+            let id = document.getElementById("txt").value;
+            let txt_sub = document.getElementById("txt_sub");
+            
+            if(id.trim() === ''){
+                txt_sub.innerHTML = "아이디는 한글자 이상";
+            }else{
+                txt_sub.innerHTML = "";
+            }
+        
+        }
+
+        function checkChange(){
+            alert("txt2의 값이 변경되고, 커서가 옮겨졌어요");
+        }
+
+        //select 태그의 변경을 감지
+        function changeSel(){
+            let sel = document.getElementById("m_select");
+            
+            if(sel.value !== ""){
+                alert(sel.value + "를 선택함");
+            }
+        }
+
+        function clearMenu(){
+            let sel = document.getElementById("m_select");
+            sel.innerHTML = "";
+            
+        }
+        
+    </script>
+</head>
+<body>
+    <!-- oninput : 입력상자의 값이 변경될 때 마다 실시간으로 감지 -->
+    <input id="txt" oninput="checkInput()"/><br/>
+
+    <!-- onchange : 입력상자에서 커서가 벗어났을 때를 감지 -->
+    <input id="txt2" onchange="checkChange()"/>
+
+    <div id="txt_sub">
+        결과
+    </div>
+
+    <hr/>
+
+    <select id="m_select" onchange="changeSel()">
+        <option value="">메뉴선택</option>
+        <option value="1">메뉴1</option>
+        <option value="2">메뉴2</option>
+    </select>
+
+    <input type="button" value="메뉴 초기화" onclick="clearMenu()"/>
+
+</body>
+</html>

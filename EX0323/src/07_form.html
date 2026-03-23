@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function check1(){
+
+            let f = document.ff;
+
+            let id = f.myid.value;
+            let pwd = f.mypwd.value;
+
+            if(id === ""){ alert("아이디를 입력하세요"); return; }
+
+            f.action = "aa.html";
+            f.method = "get";
+
+            //입력된 데이터들을 서버로 전송
+            f.submit();
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <form name="ff">
+
+        <a href="#" name="mya">안녕</a>
+
+        <table border="1">
+            <tr>
+                <th>아이디</th>
+                <td><input name="myid"/></td>
+            </tr>
+
+            <tr>
+                <th>비밀번호</th>
+                <td><input type="password" name="mypwd"/></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="전송" onclick="check1()"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

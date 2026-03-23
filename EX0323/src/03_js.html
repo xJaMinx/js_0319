@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        let index = 0;
+
+        function textAdd(){
+            let text = document.getElementById("textInput");
+
+            if(text.value == ""){
+                alert("내용을 입력하세요");
+                retrun ;
+            }
+
+            let ul = document.getElementById("addUl");
+            let str = document.createElement("li");
+            let deleteBt = document.createElement("input");
+
+            deleteBt.type = "button";
+            deleteBt.value = "삭제";
+
+            //삭제함수 연결
+            deleteBt.onclick = function(){
+                del(str);
+            }
+
+            str.innerHTML = text.value;
+            str.appendChild(deleteBt);
+
+            ul.appendChild(str);
+            
+            text.value = "";
+            text.focus();
+
+        }
+
+        function del( li ){
+            li.remove();
+        }
+
+        
+
+    </script>
+</head>
+<body>
+
+    <h2>할 일 목록</h2>
+    <input type="text" id="textInput"/>
+    <input type="button" value="추가" onclick="textAdd()"/>
+    <ul id="addUl">
+
+    </ul>
+
+</body>
+</html>

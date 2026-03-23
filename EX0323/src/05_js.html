@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            background: black;
+            color: white;
+            width: 200px;
+            height: 200px; 
+            text-align: center;
+        }
+    </style>
+
+    <script>
+
+        function colorSelect(){
+            let color = document.getElementById("selectColor");
+            let colorDiv = document.getElementById("main");
+
+            if(color.value === ""){
+                colorDiv.style.background = "black";
+                colorDiv.innerHTML = "";
+                return ;
+            }
+
+            colorDiv.style.color = "white";
+            colorDiv.style.background = color.value;
+            colorDiv.innerHTML = color.value;
+
+            if(color.value === "yellow")
+                colorDiv.style.color = "black";
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <div>
+        색상선택
+        <select id="selectColor" onchange="colorSelect()">
+            <option value="">::색상선택::</option>
+            <option value="red">빨강</option>
+            <option value="blue">파랑</option>
+            <option value="green">초록</option>
+            <option value="yellow">노랑</option>
+        </select>
+    </div>
+    <hr/>
+    <div id="main">
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        
+
+        window.onload = function(){
+
+            let selectDan = document.getElementById("selectDan");
+
+            for(let i = 2; i <= 9; i++){
+                let optionDan = document.createElement("option");
+                optionDan.innerHTML = i + "단";
+                optionDan.value = i;
+                selectDan.appendChild(optionDan);
+            }
+
+        }
+        
+        function send(){
+
+            let dan = document.getElementById("selectDan").value;
+
+            let result = document.getElementById("result");
+            let temp = "";
+
+            for(let i = 1; i <= 9; i++)
+                temp += `${dan} * ${i} = ${dan * i}<br/>`;
+
+            result.innerHTML = temp;
+        }
+
+        
+
+        
+
+
+
+
+    </script>
+</head>
+<body>
+
+    <select id="selectDan"></select>
+    <input type="button" value="확인" onclick="send()"/>
+    <div id="result"></div>
+
+</body>
+</html>
