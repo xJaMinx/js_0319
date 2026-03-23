@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let num = 1;
+        let path = "resources/image/img";
+
+        function next(){
+            if(num > 6) num = 1;
+
+            num++;
+            document.getElementById("gallery").src = path + num + ".jpg";
+        }
+
+        function prev(){
+            if(num < 1) num = 6;
+
+            num--;
+            document.getElementById("gallery").src = path + num + ".jpg";
+        }
+
+    </script>
+</head>
+<body>
+
+    <a href="#" onclick="prev()">
+        <img src="resources/image/left_btn.png"/>
+    </a>
+
+    <img src="resources/image/img1.jpg" width="300px" height="200px" id="gallery"/>
+
+    <a href="#" onclick="next()">
+        <img src="resources/image/right_btn.png"/>
+    </a>
+
+</body>
+</html>

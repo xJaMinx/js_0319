@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function send(text){
+            let myp = document.getElementById("myp");
+            myp.innerText = text;
+        }
+
+        function send2(){
+            let txt = document.getElementById("txt").value;
+            let myp = document.getElementById("myp");
+            
+            myp.innerText = txt;
+        }
+
+        function result(){
+            let input1 = Number(document.getElementById("input1").value);
+            let myul = document.getElementById("myul");
+
+            let res = "";
+            for(let i=1; i <= input1; i++){
+                res += `<li>메뉴${i}</li>`
+            }
+
+            myul.innerHTML = res;
+        }
+
+    </script>
+</head>
+<body>
+
+    <input type="button" value="버튼1" onclick="send('안녕');"/>
+    <p id="myp"></p>
+
+    <hr/>
+
+    <input type="text" size="5" id="txt" value="123"/>
+    <input type="button" value="확인" onclick="send2();"/>
+
+    <hr/>
+
+    <input id="input1"/>
+    <input type="button" value="확인" onclick="result()"/>
+    
+    <ul id="myul">
+        
+    </ul>
+
+</body>
+</html>

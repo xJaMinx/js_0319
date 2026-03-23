@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 프롬프트에서 값을 받고, if문을 사용하여
+        // 아래와 같은 결과를 도출해보도록 하자.
+
+        // 점수 : 50
+        // 성적 : F
+
+        // 90이상 A
+        // 80이상 B
+        // 70이상 C
+        // 60이상 D
+        // 59이하 F
+
+        let score = Number(prompt("점수를 입력하세요"));
+        let text = "";
+
+        if(score >= 90) text = "A";
+        else if(score >= 80) text = "B";
+        else if(score >= 70) text = "C";
+        else if(score >= 60) text = "D";
+        else text = "F";
+
+        document.write("성적 : " , text);
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
